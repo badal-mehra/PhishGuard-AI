@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         try {
-            // Replace with your Render backend URL
-            const response = await fetch('https://your-backend.onrender.com/scan', {
+            // Render backend URL
+            const response = await fetch('https://phishguard-ai-backend.onrender.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url: url })
