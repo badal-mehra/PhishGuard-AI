@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #4d44db;
+    --danger-color: #ff4757;
+    --success-color: #2ed573;
+    --warning-color: #ffa502;
+    --dark-color: #2f3542;
+    --light-color: #f1f2f6;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: var(--dark-color);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Scanner Styles */
+.scanner-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.input-group input {
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    width: 100%;
+}
+
+.glow-button {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    cursor: pointer;
+}
+
+/* Results Section */
+.result-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.verdict {
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.verdict.danger {
+    background: rgba(255, 71, 87, 0.1);
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+}
+
+.verdict.safe {
+    background: rgba(46, 213, 115, 0.1);
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.stat-card {
+    background: rgba(108, 99, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .glow-button {
+        border-radius: 8px;
+        margin-top: 0.5rem;
+        padding: 1rem;
+    }
+}
